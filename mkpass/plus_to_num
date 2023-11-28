@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+import sys
+
+for n in sys.argv[1:]:
+    num = int(n) + 7
+    
+    if num
+    elif num >= 10:
+        num -= 10
+        print(num, end=' ')
+
+    else:
+        print(num, end=' ')
+
+print("パスワードに変換されました")
