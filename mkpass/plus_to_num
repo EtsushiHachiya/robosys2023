@@ -2,15 +2,33 @@
 
 import sys
 
-for n in sys.argv[1:]:
-    num = int(n) + 7
-    
-    if num
-    elif num >= 10:
-        num -= 10
-        print(num, end=' ')
-
+#引数が数字であるか判別
+def char_or_num(x):
+    if isinstance(x, int):
+        return True
+    elif isinstance(x, str) and x.isdigit():
+        return True
     else:
-        print(num, end=' ')
+        return False
 
-print("パスワードに変換されました")
+x = 0
+pass_num = [0] * 10
+
+for n in sys.argv[1:]:
+
+    if char_or_num(n):
+
+        num = int(n) + 7
+
+        if num >= 10:
+            num -= 10
+            pass_num[x] = num
+            x += 1
+        else:
+            pass_num[x] = num
+            x += 1
+    else:
+        print("数字を入力してください")
+        sys.exit()
+
+print(pass_num[:x])
