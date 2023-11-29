@@ -1,0 +1,16 @@
+#!/bin/bash
+
+ng () {
+      echo NG at Line $1
+      res=1
+}
+
+res=0
+
+#char_to_num TEST
+out=$(python3 char_to_num a b)
+[ "${out}" = 1 ] && [ "${out}" = 2 ] && [ "${out}" = 3 ] && [ "${out}" = 4 ] || ng ${LINENO}
+
+[ "$res" = 0 ] && echo OK
+
+  exit $res
