@@ -1,6 +1,11 @@
 # robosys2023
 このリポジトリは、未来ロボティクス学科で開講された講義内で制作しているものです。
 
+# Install
+```
+git clone -b main git@github.com:EtsushiHachiya/robosys2023.git
+```
+
 # mkpass
 ![test](https://github.com/EtsushiHachiya/robosys2023/actions/workflows/test.yml/badge.svg)
 
