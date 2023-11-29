@@ -3,6 +3,7 @@
 
 # mkpass
 ![test](https://github.com/EtsushiHachiya/robosys2023/actions/workflows/test.yml/badge.svg)
+
 標準入力から読み込んだアルファベットや数字から、日常で使うパスワードを作成することができます。
 
 * char_to_num
@@ -81,7 +82,19 @@ python3 plus_to_num 1 2 0 4
 
 # plus
 ![test](https://github.com/EtsushiHachiya/robosys2023/actions/workflows/test.yml/badge.svg)
-数を足します
+
+標準入力から読み込んだ数字を足します。
+
+１．実行時の標準入力に任意の数字を与える
+```
+seq 5 | ./plus
+```
+
+
+２．数字が足されて出力される
+```
+15
+```
 
 # Author
 * Etsushi Hachiya 
