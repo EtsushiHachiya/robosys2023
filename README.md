@@ -2,16 +2,19 @@
 このリポジトリは、未来ロボティクス学科で開講された講義内で制作しているものです。
 
 # mkpass
+![test](https://github.com/EtsushiHachiya/robosys2023/actions/workflows/test.yml/badge.svg)
 パスワードを作れます
 
 # plus
+![test](https://github.com/EtsushiHachiya/robosys2023/actions/workflows/test.yml/badge.svg)
 数を足します
 
 # Usage
 
 
 # Author
-
+* Etsushi Hachiya 
+* 
 # License
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 * このパッケージは，aaa由来のコード（© 2022 Hoge Fuge）を利用しています．
