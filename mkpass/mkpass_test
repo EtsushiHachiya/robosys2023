@@ -7,10 +7,17 @@ ng () {
 
 res=0
 
-#char_to_num TEST
-out=$(python3 char_to_num a b)
-[ "${out}" = 1 ] && [ "${out}" = 2 ] && [ "${out}" = 3 ] && [ "${out}" = 4 ] || ng ${LINENO}
+# char_to_num TEST
+# I/O TEST
+out=$(python3 char_to_num a b c d)
+[ "${out}" = "1 2 3 4  " ] || ng ${LINENO}
+
+# STRANGE INPUT
+out=$(python3 char_to_num 1 2 3 4)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "1 2 3 4  " ] || ng ${LINENO}
+
 
 [ "$res" = 0 ] && echo OK
 
-  exit $res
+exit $res
