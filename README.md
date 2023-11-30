@@ -3,23 +3,58 @@
 
 # Install
 ```
-git clone -b main https://github.com/EtsushiHachiya/robosys2023
+$ git clone -b main https://github.com/EtsushiHachiya/robosys2023
+$ cd robosys2023
 ```
 
-# mkpass
+# Usage
+
+## mkpass
+
 ![test](https://github.com/EtsushiHachiya/robosys2023/actions/workflows/test.yml/badge.svg)
 
 標準入力から読み込んだアルファベットや数字から、日常で使うパスワードを作成することができます。
+```
+$ cd mkpass
+```
 
-* char_to_num
+* アルファベットからパスワードを作成
+```
+$ python3 char_to_num m y z m #文字の間に空白を一つ空ける
+$ 3 5 6 3
+```
 
-標準入力からアルファベットを読み込み、入力した文字数と同じ桁数のパスワードを作成できます。
+* 数字からパスワードを作成・その１
+```
+$ python3 plus_to_num 1 2 0 4 #文字の間に空白を一つ空ける
+$ [8, 9, 7, 1]
+```
 
-１．実行時に任意の数のアルファベットを標準入力として与える
+* 数字からパスワードを作成・その２
+```
+$ python3 minus_to_num 1 2 0 4 #文字の間に空白を一つ空ける
+$ [6, 5, 7, 3]
+```
+
+## plus
+![test](https://github.com/EtsushiHachiya/robosys2023/actions/workflows/test.yml/badge.svg)
+
+標準入力から読み込んだ数字を足します。
+```
+$ seq 5 | ./plus
+$ 15
+```
+
+#For Technical users
+
+どういう仕組みでパスワードを作っているの？って人向けです。
+
+## char_to_num
+
+１．実行時に任意の数のアルファベットが標準入力として与えられる
 ```
 python3 char_to_num m y z m
 ```
-アルファベットは大文字でも大丈夫です。アルファベットの間には空白を一つ空けましょう。
 
 ２．与えられたアルファベットを数字化する
 アルファベットは２６文字あるので、与えられたアルファベットが何番目の文字であるかを調べ、その１の位の数字に置き換えます。
@@ -31,11 +66,11 @@ python3 char_to_num m y z m
 3 5 6 3
 ```
 
-* plus_to_num
+## plus_to_num
 
 標準入力で読み込んだ数字に７を足して、入力した文字数と同じ桁数（１０桁以下）のパスワードを作成します。
 
-１．実行時に任意の数の数字を標準入力として与える
+１．実行時に任意の数の数字が標準入力として与えられる
 ```
 python3 plus_to_num 1 2 0 4
 ```
@@ -58,15 +93,14 @@ python3 plus_to_num 1 2 0 4
 数字を入力してください
 ```
 
-* minus_to_num
+## minus_to_num
 
 標準入力で読み込んだ数字から７を引いて、入力した文字数と同じ桁数（１０桁以下）のパスワードを作成します。
 
-１．実行時に任意の数の数字を標準入力として与える
+１．実行時に任意の数の数字が標準入力として与えられる
 ```
-python3 plus_to_num 1 2 0 4
+python3 minus_to_num 1 2 0 4
 ```
-数字の間には空白を一つ空けましょう。
 
 ２．与えられた数字から別の数列を作成する
 与えられた数字に引き算をして、その数字をパスワードとします。合計がマイナスになった場合はマイナス符号を無視して当てはめます。
@@ -86,7 +120,6 @@ python3 plus_to_num 1 2 0 4
 ```
 
 # plus
-![test](https://github.com/EtsushiHachiya/robosys2023/actions/workflows/test.yml/badge.svg)
 
 標準入力から読み込んだ数字を足します。
 
