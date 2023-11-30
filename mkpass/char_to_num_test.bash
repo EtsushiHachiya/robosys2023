@@ -20,6 +20,11 @@ out=$(python3 char_to_num 1 2 3 4)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "1 2 3 4  " ] || ng ${LINENO}
 
+out=$(python3 char_to_num 1234)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+
 
 [ "$res" = 0 ] && echo OK
 
