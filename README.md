@@ -45,7 +45,7 @@ $ seq 5 | ./plus
 $ 15
 ```
 
-#For Technical users
+# For Technical users
 
 どういう仕組みでパスワードを作っているの？って人向けです。
 
@@ -119,7 +119,7 @@ python3 minus_to_num 1 2 0 4
 数字を入力してください
 ```
 
-# plus
+## plus
 
 標準入力から読み込んだ数字を足します。
 
