@@ -16,7 +16,7 @@ out=$(python3 plus_to_num 1 2 0 4)
 [ "${out}" = "[8, 9, 7, 1]" ] || ng ${LINENO}
 
 out=$(python3 plus_to_num P h u b)
-[ "${out}" = 数字を入力してください ] || ng ${LINENO} #引数を文字に
+[ "${out}" = 数字を入力してください ] || ng ${LINENO} #文字
 
 out=$(python3 plus_to_num { h : %)
 [ "${out}" = 数字を入力してください ] || ng ${LINENO} #その他記号
@@ -31,7 +31,7 @@ out=$(python3 plus_to_num {h:%)
 [ "${out}" = 数字を入力してください ] || ng ${LINENO}
 
 out=$(python3 plus_to_num)
-[ "${out}" = "[]" ] || ng ${LINENO} #引数無し
+[ "${out}" = "[]" ] || ng ${LINENO} #空文字
 
 [ "$res" = 0 ] && echo OK
 
