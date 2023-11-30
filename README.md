@@ -3,7 +3,7 @@
 
 # Install
 ```
-git clone -b main git@github.com:EtsushiHachiya/robosys2023.git
+git clone -b main https://github.com/EtsushiHachiya/robosys2023
 ```
 
 # mkpass
