@@ -11,6 +11,7 @@ ng () {
 res=0
 
 # minus_to_num TEST
+#I/O TEST
 out=$(python3 minus_to_num 1 2 0 4)
 [ "${out}" = "[6, 5, 7, 3]" ] || ng ${LINENO}
 
@@ -22,6 +23,16 @@ out=$(python3 minus_to_num { h : %)
 
 out=$(python3 minus_to_num)
 [ "${out}" = "[]" ] || ng ${LINENO}
+
+out=$(python3 plus_to_num 1204)
+[ "${out}" = "[1197]"] || ng ${LINENO} #空白無し 1204-7=1197
+
+out=$(python3 plus_to_num Phub)
+[ "${out}" = 数字を入力してください ] || ng ${LINENO}
+
+out=$(python3 plus_to_num {h:%)
+[ "${out}" = 数字を入力してください ] || ng ${LINENO}
+
 
 [ "$res" = 0 ] && echo OK
 
