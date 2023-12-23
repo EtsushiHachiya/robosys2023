@@ -9,7 +9,7 @@
       steps:                   #手続きの記述
       - uses: actions/checkout@v3  #https://github.com/actions/checkoutのバージョン3を使用
       - name: All test             #このジョブの名前
-        run:
+        run: |
           test1: bash -xv ./test.bash  #テストのシェルスクリプトを走らせる
           test2: bash -xv ./char_to_num_test.bash
           test3: bash -xv ./plus_to_num_test.bash
