@@ -12,25 +12,25 @@ res=0
 
 # plus_to_num TEST
 #I/O TEST
-out=$(python3 plus_to_num 1 2 0 4)
+out=$(python3 ~/robosys/mkpass/plus_to_num 1 2 0 4)
 [ "${out}" = "[8, 9, 7, 1]" ] || ng ${LINENO}
 
-out=$(python3 plus_to_num P h u b)
+out=$(python3 ~/robosys/mkpass/plus_to_num P h u b)
 [ "${out}" = 数字を入力してください ] || ng ${LINENO} #文字
 
-out=$(python3 plus_to_num { h : %)
+out=$(python3 ~/robosys/mkpass/plus_to_num { h : %)
 [ "${out}" = 数字を入力してください ] || ng ${LINENO} #その他記号
 
-out=$(python3 plus_to_num 1204)
+out=$(python3 ~/robosys/mkpass/plus_to_num 1204)
 [ "${out}" = "[1201]"] || ng ${LINENO} #空白無し 1204+7-10=1201
 
-out=$(python3 plus_to_num Phub)
+out=$(python3 ~/robosys/mkpass/plus_to_num Phub)
 [ "${out}" = 数字を入力してください ] || ng ${LINENO}
 
-out=$(python3 plus_to_num {h:%)
+out=$(python3 ~/robosys/mkpass/plus_to_num {h:%)
 [ "${out}" = 数字を入力してください ] || ng ${LINENO}
 
-out=$(python3 plus_to_num)
+out=$(python3 ~/robosys/mkpass/plus_to_num)
 [ "${out}" = "[]" ] || ng ${LINENO} #空文字
 
 [ "$res" = 0 ] && echo OK
