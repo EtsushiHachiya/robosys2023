@@ -10,6 +10,11 @@
       - uses: actions/checkout@v3  #https://github.com/actions/checkoutのバージョン3を使用
       - name: All test             #このジョブの名前
         run: |
+          chmod +x ./test/test.bash
+          chmod +x ./test/char_to_num_test.bash
+          chmod +x ./test/plus_to_num_test.bash
+          chmod +x ./test/minus_to_num_test.bash
+
           bash -xv ./test/test.bash  #テストのシェルスクリプトを走らせる
           bash -xv ./test/char_to_num_test.bash
           bash -xv ./test/plus_to_num_test.bash
